@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'frame',
+    path: 'collection',
     component: FrameComponent
   }
 ]
