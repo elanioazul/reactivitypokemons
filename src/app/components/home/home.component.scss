@@ -88,7 +88,7 @@ h1 {
   transform: scale(0.98);
 }
 
-/* 12 */
+
 .btn-12 {
   position: relative;
   right: 20px;
@@ -103,7 +103,9 @@ h1 {
 }
 
 .btn-12 span {
-  background: linear-gradient(to right, rgb(140, 201, 206), pink);
+  //background: linear-gradient(to right, rgb(140, 201, 206), pink);
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(219,20,210,0.5409655624561096) 52%, rgba(0,212,255,1) 100%);
   display: block;
   position: absolute;
   width: 130px;
@@ -176,9 +178,9 @@ h1 {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-    7px 7px 20px 0px rgba(0, 0, 0, .1),
-    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  // box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+  //   7px 7px 20px 0px rgba(0, 0, 0, .1),
+  //   4px 4px 5px 0px rgba(0, 0, 0, .1);
   outline: none;
 }
 
