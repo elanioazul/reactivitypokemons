@@ -1,22 +1,13 @@
-<div class="hover panel" onmouseover="javascript:this.className += ' flip';"
-  onmouseout="javascript:this.className = 'hover panel';">
-  <div class="front">
-    <div class="frontTitle">
-      Engineers Without Borders (EWB)- NL
+<div class="panel"  *ngFor="let item of pokemons$ | async">
+  <div class="card">
+    <div class="card__img">
+      <a [routerLink]="['/pokemons/', item.name]"><img [src]="item.imageUrl"/>
+      </a>
     </div>
-    <div class="frontLogo isas">
+    <div class="card__name">
+      {{ item.id }} - {{ item.name | titlecase }}
     </div>
-    <div class="frontLocation">
-     Netherlands- Rotterdam HeadQuarters
-    </div>
-  </div>
-  <div class="back">
-    <div class="backTitle">Water division</div>
-    <div class="backParagraph">
-      EWB use the free time of its volunteering engineers to improve life in developing countries with their technical knowledge. All of its projects are based on a local request and include a business/social model. In this way a long-term and sustainable impact is ensured.
-    </div>
-    <div class="backGoto">
-      <a href="https://www.ewbnl.org/" target="_blank" title="Academic Portfolio">Oficial site →</a>
+    <div class="card__type">
+      {{ item.type | titlecase }} Pokemon
     </div>
   </div>
-</div>

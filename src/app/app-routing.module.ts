@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
 import { FrameComponent } from './components/frame/frame.component';
 import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 const appRoutes: Routes = [
   {
@@ -12,7 +13,11 @@ const appRoutes: Routes = [
   {
     path: 'collection',
     component: FrameComponent
-  }
+  },
+  {
+    path: 'pokemons/:id',
+    component: DetailComponent
+  },
 ]
 
 @NgModule({

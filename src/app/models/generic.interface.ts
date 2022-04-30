@@ -1,0 +1,13 @@
+//https://pokeapi.co/api/v2/pokemon/
+
+export interface Pokedex {
+  count: number;
+  next: string;
+  previous: string;
+  results: Result[];
+}
+
+export interface Result {
+  name: string;
+  url: string;
+}

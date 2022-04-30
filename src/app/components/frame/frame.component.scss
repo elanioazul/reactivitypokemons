@@ -4,6 +4,10 @@
   flex-direction: column;
   align-items: center;
   background-color: $grey-100;
+  background-image: url(https://traversymedia.com/downloads/cover.jpg);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
 
   @media(min-width: 767px) {
     flex-direction: row;

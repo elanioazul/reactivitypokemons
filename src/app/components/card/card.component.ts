@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { DataService } from '../../services/data.service';
+import { PokemonListDisplayInfoInterface } from '../../models/pokemon.interface';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  pokemons$!: Observable<PokemonListDisplayInfoInterface[]>;
 
-  ngOnInit(): void {
+  constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.pokemons$ = this.dataService.getPokemons();
   }
 
 }
