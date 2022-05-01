@@ -1,1 +1,17 @@
-<p>detail works!</p>
+<div class="detail">
+  <div class="container background-{{ pokemonData?.type }}">
+    <div class="container__img">
+      <img [src]="pokemonData?.imageUrl" />
+    </div>
+    <div class="container__info">
+      <div class="container__name">
+        #{{ pokemonData?.id }} - {{ pokemonData?.name | titlecase }}
+      </div>
+      <div class="container__desc">
+        {{ speciesInfo?.description }}
+        Found in {{ speciesInfo?.habitat }}.
+      </div>
+    </div>
+  </div>
+  <button class="background-{{ pokemonData?.type }}" [routerLink]="['/collection/']">Back to Collection</button>
+</div>

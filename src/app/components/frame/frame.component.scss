@@ -10,7 +10,18 @@
   background-size: cover;
 
   @media(min-width: 767px) {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
+}
+
+
+
+button {
+  border: 0;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 75px;
 }

@@ -71,13 +71,13 @@ export class DataService {
 
   //Methods for detail component (pokemon details)
 
-  getPokemonDetailedInfoById(id: string) {
+  getPokemonDetailedInfoById(id: string | null) {
     const pokemonInfo = this.getPokemonDetailById(id);
     const speciesInfo = this.getPokemonSpeciesInfoById(id);
     return forkJoin([pokemonInfo, speciesInfo]);
   }
 
-  getPokemonDetailById(id: string) {
+  getPokemonDetailById(id: string | null) {
     return this.http.get<Pokemon>(this.baseUrl + `/${id}`).pipe(
       map((data: Pokemon) => {
         const { id, name, sprites, stats, types, weight, height } = data;
@@ -94,7 +94,7 @@ export class DataService {
     );
   }
 
-  getPokemonSpeciesInfoById(id: string) {
+  getPokemonSpeciesInfoById(id: string | null) {
     return this.http.get<PokemonSpecies>(this.baseUrl + `-species/${id}`).pipe(
       map((data: PokemonSpecies) => {
         const { habitat, flavor_text_entries } = data;

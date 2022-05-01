@@ -11,6 +11,10 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
     path: 'collection',
     component: FrameComponent
   },

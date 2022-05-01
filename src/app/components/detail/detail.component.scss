@@ -1,0 +1,57 @@
+.detail {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  max-width: 600px;
+  max-height: 700px;
+  margin: auto;
+  place-content: center;
+
+  &__img {
+    grid-row: 1;
+    display: grid;
+    place-items: center;
+  }
+
+  &__info {
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+    row-gap: 20px;
+    grid-template-rows: min-content min-content;
+  }
+
+  &__name {
+    font-size: 22px;
+  }
+
+  &__desc {
+    width: 90%;
+    font-size: 14px;
+    margin-bottom: 10%;
+  }
+}
+
+
+img {
+  width: 60%;
+  height: 100%;
+}
+
+button {
+  max-width: 150px;
+  justify-self: center;
+
+  border: 0;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 75px;
+}
